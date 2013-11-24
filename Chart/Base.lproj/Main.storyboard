@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8pP-xa-z9L">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RST-mC-U3i">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8pP-xa-z9L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ON6-wB-Ajn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6gc-ls-hTq" kind="relationship" relationship="rootViewController" id="SBL-jf-Xco"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mco-dk-Csc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="-43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0ym-Ow-ihm">
+            <objects>
+                <viewController id="6gc-ls-hTq" customClass="ZMCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPR-fO-S7J"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQZ-Fi-bDo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VNz-b6-TrM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="111" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueS-Bi-Yms">
+                                <rect key="frame" x="20" y="171" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="条形图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QK4-wv-74l" kind="push" id="nkV-iI-PSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="222" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uC-WI-ZxV">
+                                <rect key="frame" x="254" y="171" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="折线图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QK4-wv-74l" kind="push" id="8wL-FY-Qkw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="333" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj5-Yg-5po">
+                                <rect key="frame" x="137" y="269" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="扇形图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QK4-wv-74l" kind="push" id="h3U-5y-h08"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ck6-o6-MKB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gM-jD-w4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="-43"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="JNy-Zq-k6p">
+            <objects>
+                <viewController id="QK4-wv-74l" customClass="ZMCChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Kx-lT-skT"/>
+                        <viewControllerLayoutGuide type="bottom" id="RQc-dY-Ahv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BYS-We-TsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCa-6G-1H5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KCa-6G-1H5" firstAttribute="top" secondItem="1Kx-lT-skT" secondAttribute="bottom" id="4rI-1a-Eko"/>
+                            <constraint firstAttribute="trailing" secondItem="KCa-6G-1H5" secondAttribute="trailing" id="Asz-ap-f7U"/>
+                            <constraint firstItem="KCa-6G-1H5" firstAttribute="leading" secondItem="BYS-We-TsZ" secondAttribute="leading" id="edU-tT-kXi"/>
+                            <constraint firstItem="RQc-dY-Ahv" firstAttribute="top" secondItem="KCa-6G-1H5" secondAttribute="bottom" id="gET-PH-iWl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7l-ay-nvQ"/>
+                    <connections>
+                        <outlet property="chartView" destination="KCa-6G-1H5" id="Jdk-4g-aX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFp-V1-vBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-43"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="nkV-iI-PSU"/>
+    </inferredMetricsTieBreakers>
+</document>
